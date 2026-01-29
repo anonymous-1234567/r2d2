@@ -18,7 +18,7 @@ To access the eICU dataset, follow the instructions here: https://eicu-crd.mit.e
 ## Training the Model
 To train the model from scratch, run:
 ```sh
-python3 main.py  --dataset eicu --model mlp --dataroot data/eicu/ --epochs 80 --lr 0.01 --batch-size 2048 --seed 1 --plot --model-selection --device 1 --compute-lipschitz --save-checkpoints
+python3 main.py --dataset eicu --model mlp --dataroot ../data/eicu/ --epochs 50 --lr 0.001 --batch-size 64 --model-selection --plot --save-checkpoints --proj-radius 10 --estimate-constants
 ```
 
 ## R2D Experiments
